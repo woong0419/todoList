@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+    <h1>TODO LIST</h1>
+    <form action="/todos" method="post">
+        <input type="text" name="description">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {{#todos}}
+            <li>{{description}} - {{done}}</li>
+        {{/todos}}
+    </ul>
+</body>
