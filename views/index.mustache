@@ -11,7 +11,22 @@
     </form>
     <ul>
         {{#todos}}
-            <li>{{description}} - {{done}}</li>
+            <li>
+                <form action="/todos/{{_id}}/completed" method="post">
+                    {{description}} - {{done}}<button type="submit">Done</button>
+                </form>
+            </li>
         {{/todos}}
+    </ul>
+
+    <h3>DONE</h3>
+    <ul>
+        {{#doneTodos}}
+            <li>
+                <form action="/todos/{{_id}}/completed" method="post">
+                    {{description}} - {{done}}<button type="submit">return</button>
+                </form>
+            </li>
+        {{/doneTodos}}
     </ul>
 </body>
